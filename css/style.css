@@ -193,7 +193,7 @@ a {
   position: relative;
 }
 
-#business .flex .item .item-title ::before {
+#business .flex .item .item-title::before {
   content: "";
   display: block;
   width: 8px;

@@ -179,7 +179,7 @@ a {
         margin: 0 0 10px 18px;
         position: relative;
 
-        ::before {
+        &::before {
           content:"";
           display: block;
           width:8px;

@@ -29,7 +29,7 @@ a {
 .section-title {
   font-weight: normal;
   line-height: 1;
-  margin-bottom: 76px;
+  margin-bottom: 50px;
   position: relative;
   .en {
     display: block;
@@ -43,14 +43,12 @@ a {
     font-size: 0.875rem;
   }
 
-  &::after{
+  &::after {
     content:"";
     display:block;
     width:40px;
     height:1px;
     background-color:#000000;
-    position: absolute;
-    top: 100px;
   }
 }
 
@@ -62,7 +60,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  height: 80px;
   .header-right{
     display: flex;
     align-items: center;
@@ -238,7 +236,7 @@ a {
         width: 80%;
       }
       .add {
-        margin-left: 20%;
+        padding-left: 20%;
       }
     }
   }
@@ -252,6 +250,7 @@ a {
       width: 100%;
       height: 400px;
       object-fit: cover;
+      vertical-align: bottom;
     }
   }
   
@@ -281,5 +280,158 @@ a {
     display: inline-block;
     font-size: 0.625rem;
     background-color: #F0F0F0;
+  }
+}
+
+// ----------------------------------
+//              responsive
+// ----------------------------------
+
+@media screen and (max-width: 900px) {
+
+  .section-title {
+    margin-bottom: 34px;
+    .ja {
+      margin-bottom: 24px;
+    }
+  }
+
+  // ----------------------------------
+  //            header
+  // ----------------------------------
+
+  #header {
+    .header-right {
+      flex-direction: column;
+      align-items: flex-start;
+      ul {
+        margin-left: 0;
+      }
+      .site-logo img {
+        width: 80px;
+        margin: 8px 0;
+      }
+    }
+    .button {
+      display: none;
+    }
+
+  }
+  
+  // ----------------------------------
+  //            mainvisual
+  // ----------------------------------
+
+  .mainvisual img {
+    margin-bottom: 80px;
+  }
+
+  // ----------------------------------
+  //            news
+  // ----------------------------------
+
+  #news {
+    margin-bottom: 80px;
+    ul {
+      flex-direction: column;
+      li {
+        padding-left: 0;
+        margin-bottom: 20px;
+        border-right: none;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // ----------------------------------
+  //            about
+  // ----------------------------------
+
+  #about {
+    flex-direction: column;
+    margin-bottom: 80px;
+    .about-img {
+      width: 100%;
+      img {
+        height: 300px;
+        margin-bottom: 30px;
+      }
+    }
+    .about-text {
+      width: 100%;
+      line-height: 2.2;
+      padding: 0 16px;
+    }
+  }
+  
+  // ----------------------------------
+  //            business
+  // ----------------------------------
+
+  #business {
+    margin-bottom: 80px;
+    .flex {
+      flex-direction: column;
+      padding: 0;
+      text-align: center;
+      .item-title {
+        text-align:left ;
+      }
+      .left {
+        margin-top: 0;
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+  }
+
+  // ----------------------------------
+  //            company
+  // ----------------------------------
+
+  #company {
+    flex-direction: column;
+    position: static;
+    height: auto;
+    .info {
+      padding: 40px 20px;
+      width: 100%;
+      position: static;
+      margin-bottom: 20px;
+      dl {
+        flex-direction: column;
+        dd {
+          margin-top: 5px;
+          padding-left: 14px;
+        }
+        .add {
+          padding-left: 14px;
+        }
+      }
+    }
+    .company-image {
+      width: 100%;
+      position: static;
+
+    }
+  }
+
+  // ----------------------------------
+  //            footer
+  // ----------------------------------
+
+  #footer {
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+      .footer-left img {
+        width: 80px;
+        margin: 8px 0;
+      }
+    }
   }
 }

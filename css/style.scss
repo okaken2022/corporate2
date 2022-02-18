@@ -57,11 +57,15 @@ a {
 // ----------------------------------
 
 #header {
+  background-color: #ffffff;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  .header-right{
+  width: 100%;
+  z-index: 1;
+  .header-left{
     display: flex;
     align-items: center;
     h1 {
@@ -80,16 +84,29 @@ a {
     
 
   }
-  .button a {
-    font-size: 0.735rem;
-    color: white;
-    background-color: #000000;
-    display: inline-block;
-    width: 200px;
-    height: 80px;
-    text-align: center;
-    line-height: 80px;
+  .header-right {
+    .button a {
+      font-size: 0.735rem;
+      color: white;
+      background-color: #000000;
+      display: inline-block;
+      width: 200px;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+    }
+    .menu-icon {
+      background-color: #000000;
+      color: white;
+      font-size: 30px;
+      line-height: 60px;
+      padding: 0 20px;
+      /* displayをnoneに指定してください */
+      display: none;
+    }
+
   }
+
 }
 
 // ----------------------------------
@@ -301,7 +318,7 @@ a {
   // ----------------------------------
 
   #header {
-    .header-right {
+    .header-left {
       flex-direction: column;
       align-items: flex-start;
       ul {
@@ -315,6 +332,7 @@ a {
     .button {
       display: none;
     }
+
 
   }
   
@@ -431,6 +449,23 @@ a {
       .footer-left img {
         width: 80px;
         margin: 8px 0;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  #header {
+    height: 60px;
+    .header-left {
+      ul {
+        display: none;
+      }
+    }
+    .header-right {
+      .menu-icon {
+        display: block;
+        align-items: flex-end;
       }
     }
   }

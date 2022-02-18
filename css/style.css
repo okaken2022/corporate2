@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 100%;
 }
@@ -53,6 +54,8 @@ a {
 }
 
 #header {
+  background-color: #ffffff;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,9 +66,11 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 80px;
+  width: 100%;
+  z-index: 1;
 }
 
-#header .header-right {
+#header .header-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,23 +79,23 @@ a {
           align-items: center;
 }
 
-#header .header-right h1 a img {
+#header .header-left h1 a img {
   width: 100px;
   display: block;
 }
 
-#header .header-right ul {
+#header .header-left ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 60px;
 }
 
-#header .header-right ul li {
+#header .header-left ul li {
   margin-right: 30px;
 }
 
-#header .button a {
+#header .header-right .button a {
   font-size: 0.735rem;
   color: white;
   background-color: #000000;
@@ -99,6 +104,16 @@ a {
   height: 80px;
   text-align: center;
   line-height: 80px;
+}
+
+#header .header-right .menu-icon {
+  background-color: #000000;
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  padding: 0 20px;
+  /* displayをnoneに指定してください */
+  display: none;
 }
 
 .mainvisual img {
@@ -316,7 +331,7 @@ a {
   .section-title .ja {
     margin-bottom: 24px;
   }
-  #header .header-right {
+  #header .header-left {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -325,10 +340,10 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #header .header-right ul {
+  #header .header-left ul {
     margin-left: 0;
   }
-  #header .header-right .site-logo img {
+  #header .header-left .site-logo img {
     width: 80px;
     margin: 8px 0;
   }
@@ -438,6 +453,21 @@ a {
   #footer .footer-top .footer-left img {
     width: 80px;
     margin: 8px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    height: 60px;
+  }
+  #header .header-left ul {
+    display: none;
+  }
+  #header .header-right .menu-icon {
+    display: block;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */

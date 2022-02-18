@@ -1,4 +1,0 @@
-3-way merge
-conflict
-squash
-rebase
